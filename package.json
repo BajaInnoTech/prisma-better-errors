@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yousefhany77/prisma-better-errors"
+    "url": "https://github.com/edelcorrallira/prisma-better-errors"
   },
   "keywords": [
     "Prisma"
@@ -24,9 +24,9 @@
   "author": "Youssef Hany",
   "license": "MIT",
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
-    "tsup": "^8.0.2",
-    "typescript": "^5.4.2"
+    "@changesets/cli": "^2.30.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
   },
   "publishConfig": {
     "access": "public"

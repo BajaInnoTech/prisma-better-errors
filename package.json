@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsdown src/ --format cjs,esm --dts",
+    "build": "tsup src/ --format cjs,esm --dts",
     "release": "pnpm run build && changeset publish",
     "lint": "tsc"
   },
@@ -24,13 +24,13 @@
   "author": "Youssef Hany",
   "contributors": [
     {
-      "name": "Eduardo del Corral"
+      "name":"Eduardo del Corral"
     }
   ],
   "license": "MIT",
   "devDependencies": {
     "@changesets/cli": "^2.30.0",
-    "tsdown": "^0.21.1",
+    "tsup": "^8.5.1",
     "typescript": "^5.9.3"
   },
   "publishConfig": {

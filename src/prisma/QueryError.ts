@@ -1,4 +1,23 @@
+const dbErrorStatus = 500;
 export const QueryError = new Map<string, { message: string; httpStatus: number }>([
+ //Connection related errors 
+  ['P1000', { message: 'Authentication failed against server', httpStatus: dbErrorStatus }],
+  ['P1001', { message: 'Can\'t reach server', httpStatus: dbErrorStatus }],
+  ['P1002', { message: 'Server timed out', httpStatus: dbErrorStatus }],
+  ['P1003', { message: 'Database does not exist', httpStatus: dbErrorStatus }],
+  ['P1008', { message: 'Operation timed out', httpStatus: dbErrorStatus }],
+  ['P1009', { message: 'Database already exists', httpStatus: dbErrorStatus }],
+  ['P1010', { message: 'User denied access', httpStatus: dbErrorStatus }],
+  ['P1011', { message: 'TLS connection error', httpStatus: dbErrorStatus }],
+  ['P1013', { message: 'Database string invalid', httpStatus: dbErrorStatus }],
+  ['P1014', { message: 'Underlying model does not exist', httpStatus: dbErrorStatus }],
+  ['P1015', { message: 'Prisma Schema features not supported by database', httpStatus: dbErrorStatus }],
+  ['P1017', { message: 'Server closed connection', httpStatus: dbErrorStatus }],
+  ['P2036', { message: 'Error in external connector', httpStatus: 500 }],
+  ['P2036', { message: 'Too many database connections opened', httpStatus: 500 }],
+  //Query related errors
+  ['P1012', { message: 'Invalid arguments', httpStatus: 403 }],
+  ['P1016', { message: 'Incorrect number of raw query parameters', httpStatus: 403 }],
   ['P2000', { message: "The provided value for the column is too long for the column's type", httpStatus: 400 }],
   ['P2001', { message: 'The record searched for in the where condition does not exist', httpStatus: 404 }],
   ['P2002', { message: 'Unique constraint failed', httpStatus: 409 }],
@@ -42,4 +61,10 @@ export const QueryError = new Map<string, { message: string; httpStatus: number 
     { message: "The current database provider doesn't support a feature that the query used", httpStatus: 400 },
   ],
   ['P2027', { message: 'Multiple errors occurred on the database during query execution', httpStatus: 500 }],
+  ['P2028', { message: 'Transaction API error', httpStatus: 500 }],
+  ['P2029', { message: 'Query parameter limit exceeded', httpStatus: 500 }],
+  ['P2030', { message: 'Cannot find a fulltext index to use for the search, try adding a @@fulltext([Fields...]) to your schema', httpStatus: 500 }],
+  ['P2031', { message: 'Prisma needs to perform transactions, which requires your MongoDB server to be run as a replica set', httpStatus: 500 }],
+  ['P2033', { message: 'Transaction failed due to a write conflict or a deadlock. Please retry your transaction', httpStatus: 500 }],
+  ['P2035', { message: 'Assertion violation on the database', httpStatus: 500 }],
 ]);

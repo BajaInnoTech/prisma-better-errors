@@ -1,6 +1,6 @@
 # prisma-better-errors
 
-## 1.0.4
+## 1.1.0
 
 ### Patch Changes
 

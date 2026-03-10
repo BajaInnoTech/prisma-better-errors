@@ -22,6 +22,7 @@ declare type KnownErrorParams = {
 
 export class prismaError extends Error {
   statusCode: number;
+  status: number;
   title: string;
   metaData?: string;
 
@@ -30,6 +31,7 @@ export class prismaError extends Error {
     super(message);
     this.title = 'Prisma Error';
     this.statusCode = httpStatus;
+    this.status = httpStatus;
     this.metaData = error.meta && JSON.parse(JSON.stringify(error.meta));
   }
 }

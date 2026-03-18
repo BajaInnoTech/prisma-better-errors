@@ -120,6 +120,20 @@ The following table lists the error codes and their corresponding error messages
 
 | Error Code | Message                                                                                        | HTTP Status Code |
 | ---------- | ---------------------------------------------------------------------------------------------- | ---------------- |
+| P1000      | Authentication failed against server                                                           | 500              |
+| P1001      | Can't reach server                                                                             | 500              |
+| P1002      | Server timed out                                                                               | 500              |
+| P1003      | Database does not exist                                                                        | 500              |
+| P1008      | Operation timed out                                                                            | 500              |
+| P1009      | Database already exists                                                                        | 500              |
+| P1010      | User denied access                                                                             | 500              |
+| P1011      | TLS connection error                                                                           | 500              |
+| P1012      | Invalid arguments                                                                              | 403              |
+| P1013      | Database string invalid                                                                        | 500              |
+| P1014      | Underlying model does not exist                                                                | 500              |
+| P1015      | Prisma Schema features not supported by database                                               | 500              |
+| P1016      | Incorrect number of raw query parameters                                                       | 403              |
+| P1017      | Server closed connection                                                                       | 500              |
 | P2000      | The provided value for the column is too long for the column's type                            | 400              |
 | P2001      | The record searched for in the where condition does not exist                                  | 404              |
 | P2002      | Unique constraint failed                                                                       | 409              |
@@ -148,6 +162,15 @@ The following table lists the error codes and their corresponding error messages
 | P2025      | An operation failed because it depends on one or more records that were required but not found | 404              |
 | P2026      | The current database provider doesn't support a feature that the query used                    | 400              |
 | P2027      | Multiple errors occurred on the database during query execution                                | 500              |
+| P2028      | Transaction API error                                                                          | 500              |
+| P2029      | Query parameter limit exceeded                                                                 | 500              |
+| P2030      | Cannot find a fulltext index to use for the search, try adding a @@fulltext([Fields...]) to your schema                                                                 | 500              |
+| P2031      | Prisma needs to perform transactions, which requires your MongoDB server to be run as a replica set                                                                 | 500              |
+| P2033      | Transaction failed due to a write conflict or a deadlock. Please retry your transaction                                                                 | 500              |
+| P2035      | Assertion violation on the database                                                            | 500              |
+| P2036      | Error in external connector                                                                    | 500              |
+| P2037      | Too many database connections opened                                                           | 500              |
+
 
 ## Author
 

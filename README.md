@@ -174,6 +174,6 @@ The following table lists the error codes and their corresponding error messages
 
 ## Author
 
-Youssef Hany
+Original Library Author: [Youssef Hany](http://youssefhany.dev/)
 
-[Check out my portfolio](http://youssefhany.dev/)
+This fork is maintained by [BajaInnoTech](https://bajainnotech.github.io/bajainnotech/)
